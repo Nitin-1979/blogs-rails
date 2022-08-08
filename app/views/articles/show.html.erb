@@ -1,2 +1,7 @@
-<h1>Showing data</h1>
-title: <%= @articles.title %>
+<h1><%=  @articles.title %> </h1>
+ <%= @articles.describe %>
+
+<h3>Post a Comment</h3>
+<%= render @articles.comments %><br>
+Add a comment
+<%= render 'comments/form' %>
