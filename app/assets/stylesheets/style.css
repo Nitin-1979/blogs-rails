@@ -1,0 +1,23 @@
+h1{
+    color: red;
+}
+.body{
+    text-align: center;
+}
+ .form .title input{ 
+    width: 250px;
+    height: 30px;
+ }
+
+ .form .desc textarea{ 
+    width: 250px;
+    height: 130px;
+ }
+
+ .articles{
+    margin-left: 500px;
+    width: 250px;
+    height: 130px;
+    border: 1px black solid;
+    border-bottom: none;
+ }

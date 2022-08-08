@@ -1,0 +1,39 @@
+
+<head>
+<%= stylesheet_link_tag 'style.css' %>
+</head>
+<body style="text-align :center ">
+     
+ <h1>Blog page : Create , Edit , Delete Articles </h1>
+ <div class="form">
+<%= form_with scope: :article ,url: articles_path , local:true do |f| %>
+    <p class="title">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+    </p>
+
+    <p class="desc">
+    <%= f.label :describe %><br>
+    <%= f.text_area :describe %>
+    </p>
+    
+    <p>
+    <%= f.submit %>
+    </p>
+<% end %>
+</div>
+<% @articles.each do |it| %>
+    <div class="articles">
+    <h3><%= it.title %></h3>
+    <p><%= it.describe %></p>
+    <tr>
+    <div class="action">
+    <td><%= link_to 'Show', it , method: :delete %></td>
+    <td><%= link_to 'Edit', edit_article_path(it) %></td>
+    <td><%= link_to 'Delete', it , method: :delete %></td>
+    </tr>
+    </div>
+    </div>
+<% end %>
+
+</body>
